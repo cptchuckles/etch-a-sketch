@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.frame {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: left;
+    width: 480px;
+    height: 480;
+    background-color: #f00;
+    margin: 1em auto;
+}
+
+.pixel {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+}
+
+.pixel_fill {
+    background-color: #aaa;
+}
+
+button {
+    padding: 1em;
+}
