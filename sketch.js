@@ -24,6 +24,7 @@ window.addEventListener("mouseup", () => { setDrawing(false); });
 
 function init(res) {
     let cell = frame.getBoundingClientRect().width / res;
+    let frag = document.createDocumentFragment();
 
     for(i=0; i<res; i++) {
         for(j=0; j<res; j++) {
@@ -39,9 +40,11 @@ function init(res) {
                 div.classList.remove("pixel");
                 div.classList.add("pixel_fill");
             });
-            frame.appendChild(div);
+            frag.appendChild(div);
         }
     }
+
+    frame.appendChild(frag);
 }
 
 function reset(res) {
