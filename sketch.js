@@ -22,7 +22,7 @@ window.addEventListener("mousedown", () => { setDrawing(true); });
 window.addEventListener("mouseup", () => { setDrawing(false); });
 
 
-(function init(res) {
+function init(res) {
     let cell = frame.getBoundingClientRect().width / res;
 
     for(i=0; i<res; i++) {
@@ -42,7 +42,7 @@ window.addEventListener("mouseup", () => { setDrawing(false); });
             frame.appendChild(div);
         }
     }
-})(resolution);
+}
 
 function reset(res) {
     Array.from(frame.children).forEach(n => {
@@ -55,3 +55,6 @@ function reset(res) {
 function setDrawing(b) {
     drawing = clickToDraw.checked ? b : true;
 }
+
+
+init(resolution);
